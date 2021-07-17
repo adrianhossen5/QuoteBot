@@ -1,10 +1,9 @@
-require('dotenv').config();
-client.login(process.env.Token);
-
 const fetch = require("node-fetch");
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+require('dotenv').config();
+client.login(process.env.Token);
 console.log('Hello There!');
 
 client.on('ready', readyDiscord);
