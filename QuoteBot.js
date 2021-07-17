@@ -1,20 +1,20 @@
-const fetch = require("node-fetch");
-console.log('Hello There!');
 require('dotenv').config();
 
+const fetch = require("node-fetch");
 const Discord = require('discord.js');
 const client = new Discord.Client();
 client.login(process.env.Token);
 
+console.log('Hello There!');
 client.on('ready', readyDiscord);
+client.on('message', gotMessage); 
 
 function readyDiscord() {
 
     console.log('Hey there');
 
 }
-
-client.on('message', gotMessage);    
+   
 
 async function gotMessage(msg){
 
