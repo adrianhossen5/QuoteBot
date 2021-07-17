@@ -3,11 +3,11 @@ require('dotenv').config();
 const fetch = require("node-fetch");
 const Discord = require('discord.js');
 const client = new Discord.Client();
-client.login(process.env.Token);
 
-console.log('Hello There!');
+client.login(process.env.Token);
 client.on('ready', readyDiscord);
 client.on('message', gotMessage); 
+console.log('Hello There!');
 
 function readyDiscord() {
 
