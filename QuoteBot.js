@@ -1,20 +1,21 @@
 require('dotenv').config();
+client.login(process.env.Token);
 
 const fetch = require("node-fetch");
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-client.login(process.env.Token);
-client.on('ready', readyDiscord);
-client.on('message', gotMessage); 
 console.log('Hello There!');
+
+client.on('ready', readyDiscord);
 
 function readyDiscord() {
 
     console.log('Hey there');
 
 }
-   
+
+client.on('message', gotMessage);    
 
 async function gotMessage(msg){
 
