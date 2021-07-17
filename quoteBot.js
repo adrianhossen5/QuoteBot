@@ -7,7 +7,6 @@ client.login(process.env.Token);
 console.log('Hello There!');
 
 client.on('ready', readyDiscord);
-
 function readyDiscord() {
 
     console.log('Hey there');
@@ -15,7 +14,6 @@ function readyDiscord() {
 }
 
 client.on('message', gotMessage);    
-
 async function gotMessage(msg){
 
     console.log(msg.content);
